@@ -1,0 +1,17 @@
+app:
+  applicationId: 75e2e200-b734-46bf-8e00-3be62d885498
+  env: ${STACKHAWK_ENV:Production}
+  host: ${APP_HOST:https://frontend-tan-theta-32.vercel.app}
+
+hawk:
+  spider:
+    ajax: true
+    maxDurationMinutes: 5
+
+tags:
+  - name: _STACKHAWK_AGENT
+    value: ${HAWK_AGENT:none}
+  - name: _STACKHAWK_GIT_COMMIT_SHA
+    value: ${COMMIT_SHA:none}
+  - name: _STACKHAWK_GIT_BRANCH
+    value: ${BRANCH_NAME:none}
