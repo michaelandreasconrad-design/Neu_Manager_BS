@@ -1,0 +1,14 @@
+app:
+  applicationId: f3199d06-c1f4-4b2f-a5aa-e10dc3cf0419
+  env: ${STACKHAWK_ENV:Production}
+  host: ${APP_HOST:https://business-translator-api.vercel.app}
+  openApiConf:
+    path: /openapi.json
+
+tags:
+  - name: _STACKHAWK_AGENT
+    value: ${HAWK_AGENT:none}
+  - name: _STACKHAWK_GIT_COMMIT_SHA
+    value: ${COMMIT_SHA:none}
+  - name: _STACKHAWK_GIT_BRANCH
+    value: ${BRANCH_NAME:none}

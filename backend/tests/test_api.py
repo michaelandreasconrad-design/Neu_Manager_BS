@@ -27,6 +27,11 @@ def test_health():
     assert body["model"] == llm.MODEL
 
 
+def test_security_header_nosniff():
+    assert client.get("/api/health").headers["x-content-type-options"] == "nosniff"
+    assert client.post("/api/translate", json={}).headers["x-content-type-options"] == "nosniff"
+
+
 def test_translate_ok(monkeypatch):
     seen = {}
 

@@ -30,6 +30,13 @@ app.add_middleware(
 )
 
 
+@app.middleware("http")
+async def security_headers(request: Request, call_next):
+    response = await call_next(request)
+    response.headers["X-Content-Type-Options"] = "nosniff"
+    return response
+
+
 class TranslateRequest(BaseModel):
     text: str = Field(max_length=MAX_TEXT_LENGTH)
     direction: Direction
