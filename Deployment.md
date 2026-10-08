@@ -63,4 +63,4 @@ Mehrere Origins (z. B. zusätzlich eine Custom Domain) gehen kommagetrennt in `F
 
 ## Hinweis zu früheren Deployments
 
-Frühere Versionen dieses Projekts liefen auf Heroku (`business-translator-api-75a8fdbc26c1.herokuapp.com`) und unter `business-translator.vercel.app`. Beide URLs sind nicht mehr erreichbar. `backend/Procfile` stammt noch aus dieser Zeit und wird von Vercel nicht benötigt.
+Frühere Versionen dieses Projekts liefen auf Heroku (`business-translator-api-75a8fdbc26c1.herokuapp.com`) und unter `business-translator.vercel.app`. Beide URLs sind nicht mehr erreichbar. Das zugehörige `backend/Procfile` wurde entfernt.
